@@ -35,15 +35,15 @@ class Roster extends React.Component {
       <div class="container">
         <div class="row">
           <ul class="col-sm">
-            {this.state.roster.map((spec,i) => <li onClick={this.handleDelete.bind(this,i)}>{spec.name}</li>)}
+            {this.state.roster.map((spec,i) => <img class="spec" src={window.location.origin + '/icons/'+spec.name+'.png'}  alt={spec.name} onClick={this.handleDelete.bind(this,i)} />)}
           </ul>
           
           <ul class="col-sm">
-            {specList.map((spec,i) => <li onClick={this.handleClick.bind(this, i)}>{spec.name}</li>)}
+            {specList.map((spec,i) => <img class="spec" src={window.location.origin + '/icons/'+spec.name+'.png'} alt={spec.name} onClick={this.handleClick.bind(this, i)} />)}
           </ul>
             
           <ul class="col-sm">
-            {buffList.map((buff) => <li>{this.state.roster.filter(function(spec){ return spec.buffs.includes(buff) }).length}</li>)}
+            {buffList.map((buff) => <li>{this.state.roster.filter(function(spec){ return spec.buffs.includes(buff) }).length} {buff}</li>)}
           </ul>
         </div>
       </div>

@@ -1,5 +1,5 @@
 export const buffList = [
-    "Agi/Str", "Armor%", "AP", "AP%", "BL", "Dmg%", "DR%", "Haste%", "Heal%", "HP", "int", "MP5", "mCrit", "mHaste", "replen", "sCrit", "sHaste", "SP", "spirit", "stam", "motw", "Stat%"
+    "Str/Agi", "Armor%", "AP", "AP%", "BL", "Dmg%", "DR%", "Haste%", "Heal%", "HP", "int", "MP5", "mCrit", "mHaste", "replen", "sCrit", "sHaste", "SP", "spirit", "stam", "motw", "Stat%"
 ]
 export const debuffList = [
     "ArmorMaj", "ArmorMin", "AP", "BldDmg", "cSpeed", "crit", "-Heal", "HRestore", "MRestore", "AtkSpd", "Miss%", "PhysDmg%", "sCrit", "sDMG", "sHit"
