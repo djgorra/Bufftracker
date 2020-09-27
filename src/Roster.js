@@ -9,9 +9,9 @@ class Roster extends React.Component {
            roster: [],
            activeBuffs: [],
            activeDebuffs: []
-          }
+          };
 
-      }
+      };
     
       handleClick(i, event){
         this.setState({ 
@@ -22,36 +22,36 @@ class Roster extends React.Component {
       };
 
       handleDelete(i, event){
-        let tempArr = this.state.roster
-        tempArr.splice(i,1)
-        this.setState({ roster: tempArr })
-
-        console.log(this.state.roster)
-      }
+        let tempArr = this.state.roster;
+        tempArr.splice(i,1);
+        this.setState({ roster: tempArr });
+      };
 
     render() {
 
       return(
-      <div class="container">
-        <div class="row">
-          <ul class="col-sm">
-            {this.state.roster.map((spec,i) => <img class="spec" src={window.location.origin + '/icons/'+spec.name+'.png'}  alt={spec.name} onClick={this.handleDelete.bind(this,i)} />)}
-          </ul>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            {this.state.roster.map((spec,i) => <img className="spec" src={window.location.origin + '/icons/'+spec.name+'.png'}  alt={spec.name} onClick={this.handleDelete.bind(this,i)} />)}
+          </div>
           
-          <ul class="col-sm">
-            {specList.map((spec,i) => <img class="spec" src={window.location.origin + '/icons/'+spec.name+'.png'} alt={spec.name} onClick={this.handleClick.bind(this, i)} />)}
-          </ul>
+          <div className="col-sm">
+            {specList.map((spec,i) => <img className="spec" src={window.location.origin + '/icons/'+spec.name+'.png'} alt={spec.name} onClick={this.handleClick.bind(this, i)} />)}
+          </div>
             
-          <ul class="col-sm">
-            {buffList.map((buff) => <li>{this.state.roster.filter(function(spec){ return spec.buffs.includes(buff) }).length} {buff}</li>)}
-          </ul>
+          <div className="col-sm">
+            <ul>
+              {buffList.map((buff, i) => <li key={i.toString()}>{this.state.roster.filter(function(spec){ return spec.buffs.includes(buff) }).length} {buff}</li>)}
+            </ul>
+          </div>
         </div>
       </div>
 
       
-      )
-    }
-  }
+      );
+    };
+  };
 
   export default Roster;
   
